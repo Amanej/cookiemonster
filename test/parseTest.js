@@ -1,4 +1,9 @@
-
 const cookieMonster = require('../lib/index.js');
 
-//'_ga=GA1.1.206840075.1547456732;
+const requestExample = {
+    headers: {
+        cookie: "_ga=GA1.1.206842275.1547456732"
+    },
+}
+
+const parsedCookie = cookieMonster.get(requestExample);

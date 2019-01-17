@@ -1,0 +1,31 @@
+{
+  "name": "cookiemonster",
+  "version": "1.0.0",
+  "description": "A small cookie parsing library",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amanej/cookiemonster.git"
+  },
+  "keywords": [
+    "cookie",
+    "parsing",
+    "cookieparser",
+    "parse",
+    "cookies",
+    "cookiemonster"
+  ],
+  "author": "Aman Mender",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amanej/cookiemonster/issues"
+  },
+  "homepage": "https://github.com/Amanej/cookiemonster#readme"
+}
