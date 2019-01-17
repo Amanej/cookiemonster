@@ -2,7 +2,7 @@
 <br/>
 <img width="400" src="assets/logo.png">
 <br/>
-<h2 align="center">Cookie Monster</h2>
+<h2 align="center">Cookies Monster</h2>
 <br/>
 <br/>
 </h1>

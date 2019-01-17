@@ -1,5 +1,5 @@
 {
-  "name": "cookiemonster",
+  "name": "cookiesmonster",
   "version": "1.0.0",
   "description": "A small cookie parsing library",
   "main": "dist/index.js",
