@@ -9,13 +9,17 @@
 
 > Small cookie parsing library
 
+![Build Status](https://travis-ci.org/Amanej/cookiemonster.svg?branch=master)
+
 This is a small library to parse cookies from requests in Node.
 
 ## Install
 
-`const cookieMonster = require('cookiemonster');`
+`$ npm install cookiesmonster`
 
 ## Usage
+
+`const cookieMonster = require('cookiemonster');`
 
 * Parse request for cookies
 
