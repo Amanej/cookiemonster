@@ -1,8 +1,8 @@
 <h1 align="center">
 <br/>
 <img width="400" src="assets/logo.png">
-Cookie Monster
 <br/>
+<h2 align="center">Cookie Monster</h2>
 <br/>
 </h1>
 
