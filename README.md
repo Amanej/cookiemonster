@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1 align="center" style="text-align: center;">
 <br/>
 <img width="400" src="assets/logo.png">
 <br/>
