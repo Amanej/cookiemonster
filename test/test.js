@@ -21,9 +21,9 @@ describe('Parse request with cookie', function() {
             assert.equal(parsedCookie[0].constructor, Object);
         });
     });
-  });
+});
 
-  describe('Parse request with empty cookies', function() {
+describe('Parse request with empty cookies', function() {
     const requestExample = {
         headers: {
             cookie: ""
@@ -34,4 +34,32 @@ describe('Parse request with cookie', function() {
         assert.equal(parsedCookie.length, 0);
         assert.equal(parsedCookie.constructor, Array);
     });
-  });
+});
+
+describe('Parse cookies by name', () => {
+    const requestExample = {
+        headers: {
+            cookie: "_ga=GA1.1.206842275.1547456732; randomSite=9cs09ds0cisd; _alluc=v8s9d8sv9s9e;"
+        },
+    }
+    const parsedCookie = cookieMonster.getByName(requestExample, 'randomSite');
+    //console.log("parsedCookie ",parsedCookie);
+    it('should return an object', () => {
+        assert.equal(parsedCookie.constructor, Object);
+    })
+    // with specific value
+    it('should have the right value', () => {
+        assert.equal(parsedCookie.value, "9cs09ds0cisd");
+    });
+    const emptyRequestExample = {
+        headers: {
+            cookie: "_ga=GA1.1.206842275.1547456732; _alluc=v8s9d8sv9s9e;"
+        },
+    }
+    const parsedCookieMissing = cookieMonster.getByName(emptyRequestExample, 'randomSite');
+    //console.log("parsedCookieMissing ",parsedCookieMissing);
+    it('should be empty', () => {
+        assert.equal(parsedCookieMissing === null, true);
+    })
+
+})

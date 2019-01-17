@@ -8,7 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "node test/serverTest.js",
+    "testDev": "nodemon --watch . --exec 'mocha || true'"
   },
   "repository": {
     "type": "git",
