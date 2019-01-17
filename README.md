@@ -47,6 +47,6 @@ This return an object with the name of the site, value of the cookie and if the 
 
 ## Future features
 
-* Get cookie by name
+* ~~Get cookie by name~~
 
 Suggestions and pull requests welcome!
