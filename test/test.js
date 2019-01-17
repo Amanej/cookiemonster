@@ -1,13 +1,37 @@
-const http = require('http');
+const assert = require('assert');
+const chai = require('chai');
+const chaiAssert = chai.assert;
 const cookieMonster = require('../lib/index.js');
 
-const server  = http.createServer((req,res) => {
-    const parsedCookie = cookieMonster.get(req);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(parsedCookie,null, 3));
-});
+describe('Parse request with cookie', function() {
+    const requestExample = {
+        headers: {
+            cookie: "_ga=GA1.1.206842275.1547456732"
+        },
+    }
+    describe('Get cookie from request', function() {
+        const parsedCookie = cookieMonster.get(requestExample);
+        it('should be an array', function() {
+            assert.equal(parsedCookie.constructor, Array);
+        });
+        it('with a length of 1', function() {
+            assert.equal(parsedCookie.length, 1);
+        });
+        it('array of objects', function() {
+            assert.equal(parsedCookie[0].constructor, Object);
+        });
+    });
+  });
 
-let port = process.env.PORT || '2020';
-server.listen(port,function() {
-    console.log(`The server is listening on ${port}`)
-})
+  describe('Parse request with empty cookies', function() {
+    const requestExample = {
+        headers: {
+            cookie: ""
+        },
+    }
+    const parsedCookie = cookieMonster.get(requestExample);
+    it('should be an empty array', function() {
+        assert.equal(parsedCookie.length, 0);
+        assert.equal(parsedCookie.constructor, Array);
+    });
+  });

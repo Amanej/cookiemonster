@@ -4,6 +4,7 @@
 <br/>
 <h2 align="center">Cookie Monster</h2>
 <br/>
+<br/>
 </h1>
 
 > Small cookie parsing library
@@ -32,3 +33,9 @@ This returns the parsed cookies as an array of objects.
     }
 ]
 ```
+
+## Future features
+
+* Get cookie by name
+
+Suggestions and pull requests welcome!
