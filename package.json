@@ -8,8 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
-    "build": "webpack"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
