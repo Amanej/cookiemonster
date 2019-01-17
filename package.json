@@ -8,9 +8,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test/test.js",
     "dev": "node test/serverTest.js",
-    "testDev": "nodemon --watch . --exec 'mocha || true'"
+    "testDev": "nodemon --watch . --exec 'mocha || true'",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
