@@ -25,7 +25,7 @@ This is a small library to parse cookies from requests in Node.
 
 `const cookies = cookieMonster.get(req);`
 
-This returns the parsed cookies as an array of objects or empty array.
+Pass a default node request, or from express etc. This returns the parsed cookies as an array of objects or empty array.
 
 ```
 [
@@ -38,7 +38,7 @@ This returns the parsed cookies as an array of objects or empty array.
 
 * Get cookie by name
 
-`const cookies = cookieMonster.getByName(req);`
+`const cookies = cookieMonster.getByName(req,'randomSite');`
 
 This return an object with the name of the site, value of the cookie and if the cookie is not found it returns `null`.
 
